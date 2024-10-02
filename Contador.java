@@ -26,6 +26,18 @@ public class Contador {
         return nombre;
     }
     /**
+     * 
+     * @param nombre La descripcion corta del tipo
+     */
+    public void setNombre(String nombre){
+        if(nombre == null){
+            throw new NullPointerException("parametro nulo");
+        }if(nombre.equals("")){
+            throw new IllegalArgumentException("parametro vacio");
+        }
+        this.nombre = nombre;
+    }
+    /**
      * @return La cantidad actual del tipo
      */
     public int getCantidad(){
